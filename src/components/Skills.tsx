@@ -75,7 +75,7 @@ const Skills: React.FC = () => {
                     </div>
 
                     {/* Core Competencies as Tags */}
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -95,7 +95,7 @@ const Skills: React.FC = () => {
                                 </span>
                             ))}
                         </div>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </div>
         </section>

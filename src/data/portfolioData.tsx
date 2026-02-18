@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     FaGithub,
     FaLinkedin,
@@ -7,21 +6,31 @@ import {
     FaNodeJs,
     FaDatabase,
     FaCode,
-    FaHtml5,
-    FaCss3Alt,
-    FaJava,
+    FaGitAlt,
+    FaFigma,
+    FaDocker,
 } from "react-icons/fa";
 import {
     SiExpress,
     SiMongodb,
-    SiFirebase,
     SiTailwindcss,
     SiJavascript,
-    SiCplusplus,
-    SiSpringboot,
-    SiPostman,
-    SiGooglecloud,
+    SiTypescript,
+    SiNextdotjs,
+    SiRedux,
+    SiNestjs,
+    SiReactquery,
+    SiSupabase,
+    SiSanity,
 } from "react-icons/si";
+import { TbBrandCpp } from "react-icons/tb";
+import TwilioIcon from "../assets/twilio";
+import ZustandIcon from "../assets/zustand";
+import JWPlayerIcon from "../assets/jwplayer";
+import { CgCode } from "react-icons/cg";
+
+// Standardizing some icons using available sets
+// Zustand, JWPlayer, Cursor often lack stable icons in all versions, using FaCode/Database as fallback
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -48,11 +57,11 @@ export interface Project {
     tech: string[];
     description: React.ReactNode[];
     date: string;
-    githubLink: string | null;
+    githubLink: string;
     liveLink: string | null;
     category: string;
-    icon: React.ReactNode;
     image: string;
+    icon: React.ReactNode;
 }
 
 export interface SkillItem {
@@ -74,182 +83,176 @@ export interface Experience {
     points: string[];
 }
 
-export interface SocialLink {
-    url: string;
-    icon: React.ReactNode;
-}
-
-export interface SocialLinks {
-    linkedin: SocialLink;
-    github: SocialLink;
-    email: SocialLink;
-}
-
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 export const personalInfo: PersonalInfo = {
     name: "Moinul Hossain",
-    title: "Full Stack Developer",
+    title: "Software Engineer (React)",
     email: "moinulhossainmahim@gmail.com",
-    linkedin: "https://www.linkedin.com/in/moinulhmahim",
+    linkedin: "https://www.linkedin.com/in/moinulhossainmahim/",
     github: "https://github.com/moinulhossainmahim",
     resumeLink: "/RESUME_MOINUL_HOSSAIN.pdf",
-    bio: "Innovative Full Stack Developer passionate about creating seamless and impactful web solutions. With a strong foundation in Computer Science and hands-on experience in modern web technologies, I thrive in collaborative environments and love tackling new challenges.",
-    shortBio: "I build things for the web.",
+    shortBio: "Building high-performance web applications with React, Next.js, and TypeScript.",
+    bio: "Passionate Software Engineer with a focus on Frontend development. Experience in building scalable web applications and optimizing user experiences.",
 };
 
 export const education: Education[] = [
     {
-        institution: "Chandigarh University",
-        degree: "Bachelor of Engineering in Computer Science",
-        duration: "Aug 2023 – Present",
-        score: "CGPA: 8.04/10",
+        institution: "Northern University Bangladesh",
+        degree: "Bachelor of Science in Computer Science and Engineering",
+        duration: "August 2021 – October 2025",
+        score: "CGPA: 3.66/4.0",
     },
     {
-        institution: "Namdev Public School",
-        degree: "Class 12th CBSE",
-        duration: "April 2022 - May 2023",
-        score: "96.5%",
-    },
-    {
-        institution: "Namdev Public School",
-        degree: "Class 10th CBSE",
-        duration: "April 2020 - May 2021",
-        score: "95.17%",
+        institution: "Milestone College",
+        degree: "Higher Secondary School",
+        duration: "July 2018 – May 2020",
+        score: "GPA: 4.56/5.0",
     },
 ];
 
 export const projects: Project[] = [
     {
-        title: "AyurTrace",
-        tech: ["Hyperledger Fabric", "IoT", "React.js", "Smart Contracts"],
+        title: "stuRENT",
+        tech: ["React", "Next.js", "Redux", "Tailwind CSS", "Google OAuth", "Zod", "Docker"],
         description: [
             <>
-                <span className="text-accent-1 font-semibold">
-                    1st Place Winner SIH 2025 Round 1
-                </span>
-                .
+                Developed <span className="text-accent-1 font-semibold">stuRENT</span>, a room-finding platform tailored for university students.
             </>,
             <>
-                Directed a{" "}
-                <span className="text-text-primary font-medium">
-                    blockchain-based supply chain
-                </span>{" "}
-                web application for Ayurvedic herb traceability.
+                Enabled hosts to list <span className="text-text-primary font-medium">single rooms, sublets, and flats</span> with advanced filtering by type, gender, and university.
             </>,
             <>
-                Implemented{" "}
-                <span className="text-text-primary font-medium">
-                    immutable on-chain tracking
-                </span>{" "}
-                with QR verification, ensuring{" "}
-                <span className="text-accent-1 font-semibold">
-                    100% supply chain transparency
-                </span>
-                .
+                Ensured a <span className="text-text-primary font-medium">fully responsive</span> user experience with secure authentication and robust data validation.
             </>,
         ],
-        date: "Aug 2025 – Sep 2025",
-        githubLink: "https://github.com/aditiarya37",
-        liveLink: "https://ayurtrace-sepia.vercel.app",
-        category: "Blockchain",
-        icon: <FaDatabase size={24} className="text-accent-1" />,
-        image: "/AyurTrace.png",
-    },
-    {
-        title: "MaViK-39",
-        tech: ["RAG", "IoT", "React.js", "TensorFlow", "Cloud"],
-        description: [
-            <>
-                <span className="text-accent-1 font-semibold">
-                    National Finalist SIH 2025
-                </span>
-                .
-            </>,
-            <>
-                Delivered an{" "}
-                <span className="text-text-primary font-medium">
-                    IoT-enabled lab management
-                </span>{" "}
-                web application, decreasing equipment downtime by{" "}
-                <span className="text-accent-1 font-semibold">25%</span>.
-            </>,
-            <>
-                Integrated{" "}
-                <span className="text-text-primary font-medium">
-                    biometric authentication
-                </span>
-                , voice interface, and{" "}
-                <span className="text-text-primary font-medium">
-                    RAG-powered AI chatbot
-                </span>
-                , improving operational efficiency by{" "}
-                <span className="text-accent-1 font-semibold">40%</span>.
-            </>,
-        ],
-        date: "Nov 2025 – Dec 2025",
-        githubLink: "https://github.com/aditiarya37",
-        liveLink: "https://mavik-39.vercel.app",
-        category: "IoT & AI",
-        icon: <FaCode size={24} className="text-accent-1" />,
-        image: "/MaViK-39.jpeg",
-    },
-    {
-        title: "DevLink",
-        tech: ["React JS", "Node.js", "Express.js", "MongoDB"],
-        description: [
-            <>
-                Designed and developed a{" "}
-                <span className="text-text-primary font-medium">
-                    full-stack developer community platform
-                </span>{" "}
-                enabling users to create profiles, share projects, and collaborate.
-            </>,
-            <>
-                Owned the system end-to-end by implementing{" "}
-                <span className="text-text-primary font-medium">
-                    frontend architecture
-                </span>
-                , <span className="text-text-primary font-medium">backend APIs</span>,
-                and{" "}
-                <span className="text-text-primary font-medium">
-                    secure authentication
-                </span>
-                .
-            </>,
-        ],
-        date: "June 2025 – July 2025",
-        githubLink: "https://github.com/aditiarya37",
-        liveLink: null,
+        date: "2024",
+        githubLink: "https://github.com/moinulhossainmahim/sturent-ui",
+        liveLink: "https://sturent.vercel.app",
         category: "Full Stack",
         icon: <FaReact size={24} className="text-accent-1" />,
-        image: "/DevLink.jpeg",
+        image: "/sturent.png",
     },
+    {
+        title: "Search Github User",
+        tech: ["React", "React Router", "REST API", "FusionCharts"],
+        description: [
+            <>
+                Built an <span className="text-accent-1 font-semibold">innovative web application</span> to explore the GitHub coding universe.
+            </>,
+            <>
+                Empowered users to search for profiles and gain <span className="text-text-primary font-medium">instant insights</span> into repositories, followers, and language statistics.
+            </>,
+        ],
+        date: "2023",
+        githubLink: "https://github.com/moinulhossainmahim/Search-github-users",
+        liveLink: "https://github-user-reactjs.netlify.app/",
+        category: "Frontend",
+        icon: <FaGithub size={24} className="text-accent-1" />,
+        image: "/github-user.png",
+    },
+    {
+        title: "E2S Automobiles",
+        tech: ["React", "Tailwind CSS"],
+        description: [
+            <>
+                Developed <span className="text-accent-1 font-semibold">E2S Automobiles</span>, an automobile company providing different types of automobiles services.
+            </>,
+            <>
+                Utilized industry knowledge to deliver <span className="text-text-primary font-medium">different automobiles</span> for clients.
+            </>,
+        ],
+        date: "2025",
+        githubLink: "#",
+        liveLink: "https://e2sautos.com",
+        category: "Frontend",
+        icon: <FaCode size={24} className="text-accent-1" />,
+        image: "/e2sautos.png",
+    },
+    {
+        title: "Cinehub",
+        tech: ["React", "TypeScript", "Redux", "Material UI"],
+        description: [
+            <>
+                Created an <span className="text-accent-1 font-semibold">immersive movie search</span> application for exploring favorite movies and series.
+            </>,
+            <>
+                Integrated trailers and <span className="text-text-primary font-medium">rich metadata</span> in a seamless interface for entertainment enthusiasts.
+            </>,
+        ],
+        date: "2023",
+        githubLink: "https://github.com/moinulhossainmahim/entertainment-app",
+        liveLink: "https://cine-hub.netlify.app/",
+        category: "Frontend",
+        icon: <FaCode size={24} className="text-accent-1" />,
+        image: "/cinehub.png",
+    },
+    // {
+    //     title: "Shop UI",
+    //     tech: ["React", "TypeScript", "Redux", "Material UI", "SCSS"],
+    //     description: [
+    //         <>
+    //             Developed a <span className="text-accent-1 font-semibold">user-friendly e-commerce platform</span> with a curated collection of products.
+    //         </>,
+    //         <>
+    //             Implemented a <span className="text-text-primary font-medium">seamless shopping experience</span> across various categories from fashion to electronics.
+    //         </>,
+    //     ],
+    //     date: "2023",
+    //     githubLink: "https://github.com/moinulhossainmahim",
+    //     liveLink: "https://daily-shop-ui.vercel.app/",
+    //     category: "E-commerce",
+    //     icon: <FaReact size={24} className="text-accent-1" />,
+    //     image: "/shop-ui.png",
+    // },
+    // {
+    //     title: "Shop Admin",
+    //     tech: ["Next.js", "React", "TypeScript", "Redux", "Material UI"],
+    //     description: [
+    //         <>
+    //             Built an <span className="text-accent-1 font-semibold">intuitive e-commerce admin panel</span> for store management and oversight.
+    //         </>,
+    //         <>
+    //             Streamlined <span className="text-text-primary font-medium">inventory, orders, and customer interactions</span> onto a single, powerful platform.
+    //         </>,
+    //     ],
+    //     date: "2023",
+    //     githubLink: "https://github.com/moinulhossainmahim",
+    //     liveLink: "https://shop-admin-nextjs.vercel.app/",
+    //     category: "Management",
+    //     icon: <FaDatabase size={24} className="text-accent-1" />,
+    //     image: "/shop-admin.png",
+    // },
 ];
 
 export const skills: Skills = {
     languages: [
-        { name: "C/C++", icon: <SiCplusplus /> },
-        { name: "Java", icon: <FaJava /> },
         { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "TypeScript", icon: <SiTypescript /> },
+        { name: "C", icon: <CgCode /> },
+        { name: "C++", icon: <TbBrandCpp /> },
         { name: "SQL", icon: <FaDatabase /> },
-        { name: "HTML5", icon: <FaHtml5 /> },
-        { name: "CSS3", icon: <FaCss3Alt /> },
     ],
     frameworksAndLibraries: [
         { name: "React JS", icon: <FaReact /> },
+        { name: "Redux Toolkit", icon: <SiRedux /> },
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "React Query", icon: <SiReactquery /> },
+        { name: "Zustand", icon: <ZustandIcon className="w-8 h-8" /> },
         { name: "Node JS", icon: <FaNodeJs /> },
+        { name: "Nest JS", icon: <SiNestjs /> },
         { name: "Express JS", icon: <SiExpress /> },
-        { name: "Springboot", icon: <SiSpringboot /> },
-        { name: "React Native", icon: <FaReact /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     ],
     toolsAndPlatforms: [
         { name: "MongoDB", icon: <SiMongodb /> },
-        { name: "Firebase", icon: <SiFirebase /> },
-        { name: "Google Cloud", icon: <SiGooglecloud /> },
-        { name: "Git & GitHub", icon: <FaGithub /> },
-        { name: "Postman", icon: <SiPostman /> },
-        { name: "VS Code", icon: <FaCode /> },
+        { name: "Supabase", icon: <SiSupabase /> },
+        { name: "Sanity", icon: <SiSanity /> },
+        { name: "Twilio", icon: <TwilioIcon className="w-8 h-8" /> },
+        { name: "JW Player", icon: <JWPlayerIcon className="w-8 h-8" /> },
+        { name: "Docker", icon: <FaDocker /> },
+        { name: "Git", icon: <FaGitAlt /> },
+        { name: "Figma", icon: <FaFigma /> },
     ],
     coreCompetencies: [
         "Presentations",
@@ -261,54 +264,57 @@ export const skills: Skills = {
     ],
 };
 
-// Suppress unused import warning for SiTailwindcss (kept for future use)
-void SiTailwindcss;
-
 export const experience: Experience[] = [
     {
-        role: "Product Intern",
-        organization: "Adobe",
-        duration: "Incoming 2026",
+        role: "Software Engineer",
+        organization: "TulipTech",
+        duration: "March 2025 – Present",
         points: [
-            "Selected as a Product Intern at Adobe.",
-            "Excited to contribute to world-class digital experiences and product innovation.",
+            "Managing a large-scale Turborepo monorepo consisting of 12 distinct applications, optimizing code sharing and build pipelines.",
+            "Mentoring junior developers on component design and structuring code with high quality and re-usability.",
+            "Collaborating on medical and sports platforms, focusing on operational efficiency and real-time data synchronization.",
+            "Empathika: Developed a digital care management platform featuring Titan integration for medication ordering and AI-driven resident onboarding.",
+            "The World Games 2025: Built a high-performance sports streaming platform serving 4M+ users with SSE live data synchronization and Supabase real-time notifications.",
         ],
     },
     {
-        role: "Web Development Intern",
-        organization: "Makabo Labs (Remote)",
-        duration: "June 2025 – July 2025",
+        role: "Junior Software Engineer",
+        organization: "ITLogiko",
+        duration: "Jan 2025 – Feb 2025",
         points: [
-            "Developed key components for the Redknot platform, simplifying the global immigration process.",
-            "Collaborated with engineering and design on front-end (React, UI/UX) and back-end services.",
-            "Practiced agile methodologies and maintained high code quality through debugging, testing, and documentation.",
+            "ITLogiko: Built a landing page for company Utilized React, CSS, SCSS, HTML etc.",
+            "Educational Institution Management System: Working on a web application which is responsible for managing educational institution.",
+            "Frontend Development with React TypeScript – Building dynamic and user-friendly UI components using React and TypeScript, ensuring a seamless and responsive user experience for the educational institution management system.",
+            "Backend Development with Laravel MySQL - Developing robust APIs and handling database operations using Laravel and MySQL, ensuring secure and efficient data management for the platform.",
+            "Integrated APIs into the frontend using React and Redux Toolkit, ensuring a smooth, dynamic, and reliable user experience.",
         ],
     },
     {
-        role: "Technical Executive",
-        organization: "Computer Society of India, CU Student Branch",
-        duration: "Nov 2024 - July 2025",
+        role: "Associate Software Engineer",
+        organization: "TiBX",
+        duration: "Sept 2024 – Nov 2024",
         points: [
-            "Organized 5+ workshops, hackathons, and competitions to enhance student learning and engagement.",
-            "Coordinated with faculty and industry experts to bring technical opportunities to students.",
-        ],
-    },
-    {
-        role: "AMCAT 2nd Rank Holder",
-        organization: "Chandigarh University",
-        duration: "Sept 2024",
-        points: [
-            "Secured 2nd rank in AMCAT among 5500+ peers, showcasing strong analytical and problem-solving skills.",
-            "Demonstrated excellence in aptitude, coding, and domain-specific assessments, outperforming competition.",
+            "Tirade Call Center: Built a call center web application for performing audio call, video call, conference call, messaging and managing users.",
+            "Ascalon Health: Worked in Ascalon Health web application which is responsible for managing health details of different products of TiBX.Worked closely with backend developers to ensure seamless integration of frontend and backend",
+            "Conducted peer code reviews, ensuring best practices and code standards were met."
         ],
     },
 ];
 
-export const socialLinks: SocialLinks = {
-    linkedin: { url: personalInfo.linkedin, icon: <FaLinkedin size={24} /> },
-    github: { url: personalInfo.github, icon: <FaGithub size={24} /> },
-    email: {
-        url: `mailto:${personalInfo.email}`,
-        icon: <FaEnvelope size={24} />,
+export const socialLinks = [
+    {
+        name: "LinkedIn",
+        url: personalInfo.linkedin,
+        icon: <FaLinkedin className="text-accent-1" />,
     },
-};
+    {
+        name: "GitHub",
+        url: personalInfo.github,
+        icon: <FaGithub className="text-accent-1" />,
+    },
+    {
+        name: "Email",
+        url: `mailto:${personalInfo.email}`,
+        icon: <FaEnvelope className="text-accent-1" />,
+    },
+];

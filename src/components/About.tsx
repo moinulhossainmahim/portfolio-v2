@@ -21,7 +21,7 @@ const About: React.FC = () => {
                         <span className="text-accent-1 font-mono text-2xl mr-2">
                             Hello!
                         </span>
-                        I'm Aditi, a driven Full Stack Developer with a strong foundation in
+                        I'm Moinul, a driven Full Stack Developer with a strong foundation in
                         computer science and a knack for crafting efficient, user-centric
                         applications. My journey into tech is fueled by a desire to learn,
                         innovate, and contribute to projects that make a difference. I

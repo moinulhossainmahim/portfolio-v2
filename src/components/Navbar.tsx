@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                     offset={-100}
                     className="cursor-pointer text-2xl font-bold font-mono tracking-tighter bg-gradient-to-r from-accent-1 to-accent-2 bg-clip-text text-transparent hover:scale-105 transition-transform"
                 >
-                    &lt;Aditi /&gt;
+                    &lt;Moinul /&gt;
                 </Link>
 
                 {/* Desktop Links */}
