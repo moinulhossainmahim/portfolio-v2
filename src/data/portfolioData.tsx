@@ -88,12 +88,12 @@ export interface SocialLinks {
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 export const personalInfo: PersonalInfo = {
-    name: "Aditi Arya",
+    name: "Moinul Hossain",
     title: "Full Stack Developer",
-    email: "aditiarya1511@gmail.com",
-    linkedin: "https://linkedin.com/in/aditiarya37",
-    github: "https://github.com/aditiarya37",
-    resumeLink: "/AditiAryaResume.pdf",
+    email: "moinulhossainmahim@gmail.com",
+    linkedin: "https://www.linkedin.com/in/moinulhmahim",
+    github: "https://github.com/moinulhossainmahim",
+    resumeLink: "/RESUME_MOINUL_HOSSAIN.pdf",
     bio: "Innovative Full Stack Developer passionate about creating seamless and impactful web solutions. With a strong foundation in Computer Science and hands-on experience in modern web technologies, I thrive in collaborative environments and love tackling new challenges.",
     shortBio: "I build things for the web.",
 };
