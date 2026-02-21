@@ -18,9 +18,9 @@ function App(): React.JSX.Element {
                 <Hero />
                 <About />
                 <Skills />
+                <Experience />
                 <Projects />
                 <Blogs />
-                <Experience />
                 <Contact />
             </main>
             <Footer />
