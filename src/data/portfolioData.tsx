@@ -292,7 +292,7 @@ export const experience: Experience[] = [
     {
         role: "Associate Software Engineer",
         organization: "TiBX",
-        duration: "Sept 2024 – Nov 2024",
+        duration: "August 2022 – July 2023",
         points: [
             "Tirade Call Center: Built a call center web application for performing audio call, video call, conference call, messaging and managing users.",
             "Ascalon Health: Worked in Ascalon Health web application which is responsible for managing health details of different products of TiBX.Worked closely with backend developers to ensure seamless integration of frontend and backend",
