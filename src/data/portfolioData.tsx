@@ -87,13 +87,13 @@ export interface Experience {
 
 export const personalInfo: PersonalInfo = {
     name: "Moinul Hossain",
-    title: "Software Engineer (React)",
+    title: "Full Stack Engineer",
     email: "moinulhossainmahim@gmail.com",
     linkedin: "https://www.linkedin.com/in/moinulhossainmahim/",
     github: "https://github.com/moinulhossainmahim",
     resumeLink: "/RESUME_MOINUL_HOSSAIN.pdf",
     shortBio: "Building high-performance web applications with React, Next.js, and TypeScript.",
-    bio: "Passionate Software Engineer with a focus on Frontend development. Experience in building scalable web applications and optimizing user experiences.",
+    bio: "I build high-performance, scalable web applications with a focus on clean architecture and seamless user experiences. Specializing in architecting modern full-stack ecosystems that drive technical innovation.",
 };
 
 export const education: Education[] = [
