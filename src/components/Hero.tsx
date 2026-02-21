@@ -113,11 +113,11 @@ const Hero: React.FC = () => {
                         {/* Decorative background ring */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-accent-1 to-accent-2 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse" />
 
-                        <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-white/10 group-hover:border-accent-1/50 transition-colors duration-500 shadow-2xl">
+                        <div className="relative w-72 h-[450px] sm:w-[400px] sm:h-[550px] md:w-[480px] md:h-[650px] rounded-3xl overflow-hidden border-2 border-white/10 group-hover:border-accent-1/50 transition-colors duration-500 shadow-3xl">
                             <img
                                 src="/moinul-profile-image.jpg"
                                 alt={personalInfo.name}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                             />
                             {/* Overlay for professional feel */}
                             <div className="absolute inset-0 bg-gradient-to-t from-primary-bg/40 to-transparent pointer-none" />
