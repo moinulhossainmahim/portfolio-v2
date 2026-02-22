@@ -89,7 +89,7 @@ export const personalInfo: PersonalInfo = {
     name: "Moinul Hossain",
     title: "Full Stack Engineer",
     email: "moinulhossainmahim@gmail.com",
-    linkedin: "https://www.linkedin.com/in/moinulhossainmahim/",
+    linkedin: "https://www.linkedin.com/in/moinulhmahim/",
     github: "https://github.com/moinulhossainmahim",
     resumeLink: "/RESUME_MOINUL_HOSSAIN.pdf",
     shortBio: "Building high-performance web applications with React, Next.js, and TypeScript.",
