@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
     return (
         <section
             id="hero"
-            className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-primary-bg"
+            className="relative w-full min-h-screen lg:h-screen flex items-center justify-center overflow-hidden bg-primary-bg py-20 lg:py-0"
         >
             {/* Animated Background Blobs */}
             <motion.div
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-accent-1 font-mono mb-4 text-lg sm:text-xl tracking-wide"
+                            className="text-accent-1 font-mono mb-4 text-lg sm:text-xl tracking-wide uppercase"
                         >
                             Hi, my name is
                         </motion.p>
@@ -43,12 +43,11 @@ const Hero: React.FC = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.3, type: "spring" }}
-                            className="text-5xl sm:text-7xl md:text-8xl font-bold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-white to-text-secondary"
+                            className="text-4xl sm:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-white to-text-secondary"
                         >
                             {personalInfo.name}.
                         </motion.h1>
 
-                        {/* Dynamic Role / Typewriter */}
                         {/* Static Title */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +55,7 @@ const Hero: React.FC = () => {
                             transition={{ delay: 0.4 }}
                             className="mb-8"
                         >
-                            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-1 to-accent-2">
+                            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-1 to-accent-2">
                                 Full Stack Engineer
                             </h2>
                         </motion.div>
@@ -130,7 +129,7 @@ const Hero: React.FC = () => {
             <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-secondary/50"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-secondary/50 hidden sm:block"
             >
                 <FaChevronDown size={24} />
             </motion.div>

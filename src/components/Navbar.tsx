@@ -44,13 +44,14 @@ const Navbar: React.FC = () => {
                     smooth={true}
                     duration={500}
                     offset={-100}
-                    className="cursor-pointer text-2xl font-bold font-mono tracking-tighter bg-gradient-to-r from-accent-1 to-accent-2 bg-clip-text text-transparent hover:scale-105 transition-transform"
+                    className={`cursor-pointer text-2xl font-bold font-mono tracking-tighter bg-gradient-to-r from-accent-1 to-accent-2 bg-clip-text text-transparent hover:scale-105 transition-all duration-300 ${!scrolled ? "max-lg:opacity-0 max-lg:pointer-events-none" : "opacity-100"
+                        }`}
                 >
                     &lt;Moinul /&gt;
                 </Link>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex items-center space-x-8 h-full">
+                <div className="hidden lg:flex items-center space-x-8 h-full">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -76,7 +77,7 @@ const Navbar: React.FC = () => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-text-primary focus:outline-none flex items-center"
+                    className="lg:hidden text-text-primary focus:outline-none flex items-center"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -90,7 +91,7 @@ const Navbar: React.FC = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-secondary-bg/95 backdrop-blur-xl border-t border-white/10 overflow-hidden rounded-b-md"
+                        className="lg:hidden bg-secondary-bg/95 backdrop-blur-xl border-t border-white/10 overflow-hidden rounded-b-md"
                     >
                         <div className="flex flex-col items-center py-6 space-y-6">
                             {navLinks.map((link) => (
