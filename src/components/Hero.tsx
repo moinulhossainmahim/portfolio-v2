@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
                             className="mb-8"
                         >
                             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-1 to-accent-2">
-                                Full Stack Engineer
+                                Full Stack Software Engineer
                             </h2>
                         </motion.div>
 

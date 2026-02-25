@@ -117,3 +117,15 @@ If you see an error saying the resource was "disallowed by Azure" during creatio
     - **West Europe**
     - **West US 3**
 3.  **Consistency**: Ensure the **Resource Group**, **Container App Environment**, and **Container App** are all in the *same* allowed region.
+
+### Error: `DENIED: denied` (Registry Pull Error)
+This happens when the image is public, but Azure is still trying to use old credentials.
+
+**How to fix:**
+1. In the left sidebar of your **Container App**, look under the **Application** group.
+2. Click on **Revisions and replicas**.
+3. Click the **+ Create new revision** button at the top.
+4. Click on the container name in the list.
+5. Change the **Registry type** (or Authentication) to **Public**.
+6. Click **Save** at the bottom, then click the blue **Create** button.
+7. Once the new revision is "Running", go back and add your custom domain.
