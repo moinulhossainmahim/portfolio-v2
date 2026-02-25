@@ -4,16 +4,12 @@ FROM node:20-alpine as build
 WORKDIR /app
 
 # Copy package files and install dependencies
-# We use bun since the project has bun.lock, but let's just use npm/bun if available.
-# Actually, the user migrated to bun in a previous conversation.
-RUN npm install -g bun
-
-COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile
+COPY package.json package-lock.json ./
+RUN npm ci
 
 # Copy the rest of the app and build
 COPY . .
-RUN bun run build
+RUN npm run build
 
 # Production stage
 FROM nginx:alpine
